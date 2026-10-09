@@ -4,6 +4,8 @@ public abstract class Animal {
     protected int felicidade = 50;
     protected int fome = 50;
     protected int energia = 50;
+    private int MAXIMO_VALOR = 100;
+    private int MINIMO_VALOR = 0;
 
     public int getFome() { return fome; }
 
@@ -24,22 +26,22 @@ public abstract class Animal {
     public abstract void turno();
 
     public void limites() {
-        if (energia <= 0) {
-            energia = 0;
-        } else if (energia >= 100) {
-            energia = 100;
+        if (energia <= MINIMO_VALOR) {
+            energia = MINIMO_VALOR;
+        } else if (energia >= MAXIMO_VALOR) {
+            energia = MAXIMO_VALOR;
         }
 
-        if (fome <= 0) {
-            fome = 0;
-        } else if (fome >= 100) {
-            fome = 100;
+        if (fome <= MINIMO_VALOR) {
+            fome = MINIMO_VALOR;
+        } else if (fome >= MAXIMO_VALOR) {
+            fome = MAXIMO_VALOR;
         }
 
-        if (felicidade <= 0) {
-            felicidade = 0;
-        } else if (felicidade >= 100) {
-            felicidade = 100;
+        if (felicidade <= MINIMO_VALOR) {
+            felicidade = MINIMO_VALOR;
+        } else if (felicidade >= MAXIMO_VALOR) {
+            felicidade = MAXIMO_VALOR;
         }
     }
 
