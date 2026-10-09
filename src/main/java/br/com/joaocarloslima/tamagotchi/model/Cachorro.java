@@ -7,18 +7,21 @@ public class Cachorro extends Animal {
         this.felicidade += 15;
         this.fome += 10;
         this.energia -= 10;
+        limites();
     }
 
     @Override
     public void comer(){
         this.fome -= 20;
         this.energia += 15;
+        limites();
     }
 
     @Override
     public void dormir(){
         this.energia += 15;
         this.fome += 10;
+        limites();
     }
 
     @Override
